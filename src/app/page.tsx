@@ -1,21 +1,21 @@
 import Image from "next/image";
 
 const links = [
-  {
-    label: "Mountain Motor House Inn Snack",
-    description: "See latest lineup",
-    href: "/inv/mmhi-snack.jpg",
-  },
+  // {
+  //   label: "Mountain Motor House Inn Snack",
+  //   description: "See latest lineup",
+  //   href: "/inv/mmhi-snack.jpg",
+  // },
   // {
   //   label: "Highlands Bldg One Snack",
   //   description: "See latest lineup",
   //   href: "/inv/hl-1-snack.jpg",
   // },
-  // {
-  //   label: "Highlands Bldg One Drink",
-  //   description: "See latest lineup",
-  //   href: "/inv/hl-1-drink.jpg",
-  // },
+  {
+    label: "Highlands Bldg One Drink",
+    description: "See latest lineup",
+    href: "/inv/hl-1-drink.jpg",
+  },
 ];
 
 export default function Home() {
