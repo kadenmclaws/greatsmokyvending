@@ -1,34 +1,21 @@
+import Image from "next/image";
+
 const links = [
   {
-    label: "Foo Bar Machines",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet.",
-    href: "https://example.com/foo-bar",
+    label: "Mountain Motor House Inn Snack",
+    description: "See latest lineup",
+    href: "/inv/mmhi-snack.jpg",
   },
-  {
-    label: "Lorem Ipsum Snacks",
-    description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
-    href: "https://example.com/lorem-ipsum",
-  },
-  {
-    label: "Dolor Sit Beverages",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
-    href: "https://example.com/dolor-sit",
-  },
-  {
-    label: "Amet Consectetur Candy",
-    description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
-    href: "https://example.com/amet-consectetur",
-  },
-  {
-    label: "Adipiscing Elit Chips",
-    description:
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-    href: "https://example.com/adipiscing-elit",
-  },
+  // {
+  //   label: "Highlands Bldg One Snack",
+  //   description: "See latest lineup",
+  //   href: "/inv/hl-1-snack.jpg",
+  // },
+  // {
+  //   label: "Highlands Bldg One Drink",
+  //   description: "See latest lineup",
+  //   href: "/inv/hl-1-drink.jpg",
+  // },
 ];
 
 export default function Home() {
@@ -36,23 +23,32 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 font-sans dark:bg-zinc-900">
       {/* Header */}
       <header className="bg-white shadow-sm dark:bg-zinc-800">
-        <div className="mx-auto max-w-4xl px-6 py-6">
+        <div className="mx-auto max-w-4xl text-center px-6 py-6">
           <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-            Great Smoky Vending
+            <Image
+              src="/logo.png"
+              alt="Great Smoky Vending Logo"
+              width={170}
+              height={170}
+              className="inline-block mr-3"
+              loading="eager"
+            />
           </h1>
           <p className="mt-1 text-zinc-500 dark:text-zinc-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quality Vending Machines for Sevier County TN
           </p>
         </div>
       </header>
 
       {/* Main content */}
       <main className="mx-auto max-w-4xl px-6 py-12">
-        <p className="mb-10 text-lg leading-relaxed text-zinc-600 dark:text-zinc-300">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo.
+        <p className="mb-10 text-lg leading-relaxed text-zinc-800 dark:text-zinc-300">
+          We provide convenient and modern vending machine solutions for your
+          business or organization, whether as a benefit for your employees or
+          amenity to your customers. We keep a quick and easy online reference
+          to current machine inventory, seen below. If you like what you see or
+          need a vending machine solution, please reach out us by phone: (865)
+          280-2107
         </p>
 
         {/* Button-like link grid */}
@@ -61,9 +57,9 @@ export default function Home() {
             <a
               key={href}
               href={href}
-              target="_blank"
+              // target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white px-6 py-5 shadow-sm transition-all hover:border-zinc-400 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-500"
+              className="flex flex-col gap-2 hover:-translate-y-1 rounded-2xl border border-zinc-200 bg-white px-6 py-5 shadow-sm transition-all hover:border-zinc-400 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-500"
             >
               <span className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
                 {label} →
