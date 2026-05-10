@@ -6,13 +6,13 @@ const links = [
   //   description: "See latest lineup",
   //   href: "/inv/mmhi-snack.jpg",
   // },
-  // {
-  //   label: "Highlands Bldg One Snack",
-  //   description: "See latest lineup",
-  //   href: "/inv/hl-1-snack.jpg",
-  // },
   {
-    label: "Highlands Bldg One Drink",
+    label: "Highlands Bldg #1 Snack",
+    description: "See latest lineup",
+    href: "/inv/hl-1-snack.jpg",
+  },
+  {
+    label: "Highlands Bldg #1 Drink",
     description: "See latest lineup",
     href: "/inv/hl-1-drink.jpg",
   },
@@ -42,13 +42,25 @@ export default function Home() {
 
       {/* Main content */}
       <main className="mx-auto max-w-4xl px-6 py-12">
-        <p className="mb-10 text-lg leading-relaxed text-zinc-800 dark:text-zinc-300">
+        <p className="mb-10 text-lg leading-relaxed text-zinc-900 dark:text-zinc-200">
           We provide convenient and modern vending machine solutions for your
           business or organization, whether as a benefit for your employees or
-          amenity to your customers. We keep a quick and easy online reference
-          to current machine inventory, seen below. If you like what you see or
-          need a vending machine solution, please reach out us by phone: (865)
+          amenity to your customers.
+        </p>
+        <p className="mb-6 text-lg text-zinc-900 dark:text-zinc-50">
+          We are looking for additional locations to service in the Sevier
+          County area. If you are a business owner or manager interested in
+          hosting a vending machine, please reach out to us by phone: (865)
           280-2107
+          <br />
+          <br />
+          Thank you!
+          <br />
+        </p>
+        <hr className="my-8 border-zinc-300 dark:border-zinc-700" />
+        <p className="mb-6 text-lg text-zinc-900 dark:text-zinc-50">
+          We keep a quick and easy online reference to current machine
+          inventory, seen below:
         </p>
 
         {/* Button-like link grid */}
@@ -59,14 +71,29 @@ export default function Home() {
               href={href}
               // target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col gap-2 hover:-translate-y-1 rounded-2xl border border-zinc-200 bg-white px-6 py-5 shadow-sm transition-all hover:border-zinc-400 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-500"
+              className="relative flex overflow-auto flex-col gap-2 hover:-translate-y-1 rounded-2xl border border-zinc-300 bg-white shadow-sm transition-all hover:border-zinc-400 hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-500"
             >
-              <span className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
-                {label} →
-              </span>
-              <span className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-                {description}
-              </span>
+              <div className="aspect-4/3 relative">
+                <Image
+                  src={href}
+                  alt={label}
+                  // width={400}
+                  // height={300}
+                  fill
+                  // layout="responsive"
+                  className="rounded-t-2xl object-cover"
+                  sizes="575px"
+                />
+              </div>
+              <div className=" px-6 py-5">
+                <span className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
+                  {label}
+                </span>
+                <br />
+                <span className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+                  Click to see current selections →
+                </span>
+              </div>
             </a>
           ))}
         </div>
