@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const links = [
-  // {
-  //   label: "Mountain Motor House Inn Snack",
-  //   description: "See latest lineup",
-  //   href: "/inv/mmhi-snack.jpg",
-  // },
+  {
+    label: "Mountain Motor House Inn Snack",
+    description: "See latest lineup",
+    href: "/inv/mmhi-snack.jpg",
+  },
   {
     label: "Highlands Bldg #1 Snack",
     description: "See latest lineup",
